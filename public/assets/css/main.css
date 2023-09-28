@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+    background: #121212;
+}
+
+.container {
+    width: 1024px !important;
+    margin: 0 auto;
+    padding: 0 20px
+}
+
+.router-link-active {
+    color: rgb(74 222 128 / var(--tw-text-opacity)) !important;
+    border-bottom: 1px solid rgb(74 222 128 / var(--tw-text-opacity))
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
