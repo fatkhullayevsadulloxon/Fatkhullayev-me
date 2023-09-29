@@ -16,6 +16,10 @@ body {
     border-bottom: 1px solid rgb(74 222 128 / var(--tw-text-opacity))
 }
 
+html{
+    overflow-x: hidden !important;
+}
+
 ::selection {
     background-color: #4ade80;
     color: #121212

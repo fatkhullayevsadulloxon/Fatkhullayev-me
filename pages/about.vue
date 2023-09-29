@@ -39,7 +39,7 @@ useHead({
                 <div class="flex items-center justify-between">
                     <Career careertitle="Frontend Mentor" careerdate="oct 2022 – Aug 2022" careername="It-center" careerlocation="Fergana, besharik" careerlink="https://t.me/ITCenterBeshariq"/>
                     <Career careertitle="Assisent mentor" careerdate="sept 2023 – continues" careername="UIC Academy" careerlocation="Tashkent, Mirzo ulug'bek" careerlink="https://uic.academy/"/>
-                    <Career careertitle="Fronend Vuejs" careerdate="sept 2023 – continues" careername="UIC group" careerlocation="Tashkent, Mirzo ulug'bek" careerlink="https://uic.group/"/>
+                    <Career careertitle="Frontend Vuejs" careerdate="sept 2023 – continues" careername="UIC group" careerlocation="Tashkent, Mirzo ulug'bek" careerlink="https://uic.group/"/>
                 </div>
             </div>
         </section>
