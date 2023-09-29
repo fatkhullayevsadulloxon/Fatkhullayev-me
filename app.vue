@@ -8,7 +8,7 @@
       </NuxtLayout>
     </div>
     <img class="absolute z-10 bottom-20" src="./public/assets/images/Pill-Blue-Glossy.svg" alt="">
-    <img class="absolute z-10 bottom-0 flex left-[50%]" src="./public/assets/images/RoundCube-Orange-Glossy.svg" alt="">
+    <!-- <img class="absolute z-10 bottom-0 flex left-[50%]" src="./public/assets/images/RoundCube-Orange-Glossy.svg" alt=""> -->
     <img class="absolute bottom-0 flex right-0" src="./public/assets/images/SuperToroid-Yellow-Glossy.svg" alt="">
   </div>
 </template>
@@ -42,6 +42,6 @@
   position: absolute;
   top: 50% !important;
   left: 50% !important;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
 }
 </style>

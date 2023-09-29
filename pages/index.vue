@@ -1,22 +1,22 @@
 <template>
     <div>
         <Header></Header>
-        <section class="hero mt-[120px]">
+        <section class="hero mt-[120px] animate__animated animate__fadeIn">
             <div class="container hero__container flex items-center justify-between">
                 <div class="hero__left">
                     <h3
-                        class="animate__animated animate__slideInDown bg-gradient-to-r text-transparent bg-clip-text from-green-400 to-blue-400 font-bold text-5xl lg:text-7xl lg:max-w-[30rem] mb-5 tracking-[1.25px] !font-poppins flex items-center">
+                        class="bg-gradient-to-r text-transparent bg-clip-text from-green-400 to-blue-400 font-bold text-5xl lg:text-7xl lg:max-w-[30rem] mb-5 tracking-[1.25px] !font-poppins flex items-center">
                         <img src="../public/assets/images/Microsoft-Fluentui-Emoji-3d-Waving-Hand-3d-Default.svg" alt=""
                             width="70">
-                        <span>Salooom!</span>
+                        <span>Helloooo!</span>
                     </h3>
-                    <h3 class="animate__animated animate__slideInRight text-white text-3xl lg:max-w-[30rem] tracking-[1.25px] !font-poppins"><span
+                    <h3 class=" text-white text-3xl lg:max-w-[30rem] tracking-[1.25px] !font-poppins"><span
                             class="font-bold">Fatkhullayev Sa'dulloxon</span> Frontend usta</h3>
-                    <p class="text-white animate__animated animate__slideInLeft font-poppins max-w-[400px] tracking-[1px] mt-2 mb-3">Web saytlarni <span
+                    <p class="text-white font-poppins max-w-[400px] tracking-[1px] mt-2 mb-3">Web saytlarni <span
                             class="font-bold">frontend</span> qismini ishlab chiqaman. Web sahifamni yaratishdan ko'zlangan
                         maqsad, qilgan barcha <span class="font-bold">loyihalarimni</span> bir joyga jamlash va
                         <span class="font-bold">maqolalar</span> yozib borishdan iborat!</p>
-                    <GlobalButton class="animate__animated animate__slideInRight" to="/portfolio">Portfolio</GlobalButton>
+                    <GlobalButton class="" to="/portfolio">Portfolio</GlobalButton>
                 </div>
                 <Card/>
             </div>
