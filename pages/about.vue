@@ -2,6 +2,10 @@
 import { useClipboard } from '@vueuse/core'
 const { text, copy, copied, isSupported } = useClipboard({})
 
+useHead({
+    title: 'Fatkhullayev - About'
+})
+
 </script>
 
 <template>

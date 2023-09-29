@@ -31,12 +31,11 @@
 }
 
 .home {
+  padding: 30px 170px;
   border-radius: 24px;
   border: 2px solid rgba(255, 255, 255, 0.50);
   background: linear-gradient(107deg, rgba(255, 255, 255, 0.05) 3.44%, rgba(255, 255, 255, 0.02) 64.82%);
   backdrop-filter: blur(15px);
-  width: 90%;
-  height: 90%;
   flex-shrink: 0;
   z-index: 5;
   position: absolute;
