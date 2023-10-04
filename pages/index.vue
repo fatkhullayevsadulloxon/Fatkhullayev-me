@@ -14,7 +14,7 @@
                         @communityCLick="communityCLick" :homeicon="clickState.homeicon"
                         :exploreicon="clickState.exploreicon" :watchlisticon="clickState.watchlisticon"
                         :communityicon="clickState.communityicon"></FuncNav>
-                    <Transition name="slide-up">
+                    <Transition mode="out-in" name="slide-up">
                         <FuncBlock v-if="clickState.homeicon">
                             <div class="transition-300">
                                 <img data-v-d8c62812="" src="https://sarafscreening.com/images/functionality/main-3.webp"
@@ -37,9 +37,29 @@
                                     alt="" width="163" height="336" class="w-[163px] translate-y-[20%]">
                             </div>
                         </FuncBlock>
-                    </Transition>
-                    <Transition name="slide-up">
-                        <FuncBlock v-if="clickState.exploreicon">
+                        <FuncBlock v-else-if="clickState.exploreicon">
+                            <div class="transition-300">
+                                <img data-v-d8c62812="" src="https://sarafscreening.com/images/functionality/main-3.webp"
+                                    alt="" width="163" height="336" class="w-[163px] translate-y-[20%]">
+                            </div>
+                            <div class="transition-300">
+                                <img data-v-d8c62812="" src="https://sarafscreening.com/images/functionality/main-3.webp"
+                                    alt="" width="163" height="336" class="w-[163px] translate-y-[-20%]">
+                            </div>
+                            <div class="transition-300">
+                                <img data-v-d8c62812="" src="https://sarafscreening.com/images/functionality/main-1.webp"
+                                    alt="" width="163" height="336" class="w-[163px] translate-y-[20%]">
+                            </div>
+                            <div class="transition-300">
+                                <img data-v-d8c62812="" src="https://sarafscreening.com/images/functionality/main-2.webp"
+                                    alt="" width="163" height="336" class="w-[163px] translate-y-[-20%]">
+                            </div>
+                            <div class="transition-300">
+                                <img data-v-d8c62812="" src="https://sarafscreening.com/images/functionality/main-3.webp"
+                                    alt="" width="163" height="336" class="w-[163px] translate-y-[20%]">
+                            </div>
+                        </FuncBlock>
+                        <FuncBlock v-else-if="clickState.watchlisticon">
                             <div class="transition-300">
                                 <img data-v-d8c62812="" src="https://sarafscreening.com/images/functionality/explore-1.webp"
                                     alt="" width="163" height="336" class="w-[163px] translate-y-[20%]">
@@ -61,38 +81,7 @@
                                     alt="" width="163" height="336" class="w-[163px] translate-y-[20%]">
                             </div>
                         </FuncBlock>
-                    </Transition>
-                    <transition name="slide-up">
-                        <FuncBlock v-if="clickState.watchlisticon">
-                            <div class="transition-300">
-                                <img data-v-d8c62812=""
-                                    src="https://sarafscreening.com/images/functionality/watchlist-5.webp" alt=""
-                                    width="163" height="336" class="w-[163px] translate-y-[20%]">
-                            </div>
-                            <div class="transition-300">
-                                <img data-v-d8c62812=""
-                                    src="https://sarafscreening.com/images/functionality/watchlist-2.webp" alt=""
-                                    width="163" height="336" class="w-[163px] translate-y-[-20%]">
-                            </div>
-                            <div class="transition-300">
-                                <img data-v-d8c62812=""
-                                    src="https://sarafscreening.com/images/functionality/watchlist-3.webp" alt=""
-                                    width="163" height="336" class="w-[163px] translate-y-[20%]">
-                            </div>
-                            <div class="transition-300">
-                                <img data-v-d8c62812=""
-                                    src="https://sarafscreening.com/images/functionality/watchlist-4.webp" alt=""
-                                    width="163" height="336" class="w-[163px] translate-y-[-20%]">
-                            </div>
-                            <div class="transition-300">
-                                <img data-v-d8c62812=""
-                                    src="https://sarafscreening.com/images/functionality/watchlist-1.webp" alt=""
-                                    width="163" height="336" class="w-[163px] translate-y-[20%]">
-                            </div>
-                        </FuncBlock>
-                    </transition>
-                    <transition name="slide-up">
-                        <FuncBlock v-if="clickState.communityicon">
+                        <FuncBlock v-else-if="clickState.communityicon">
                             <div class="transition-300">
                                 <img data-v-d8c62812="" src="https://sarafscreening.com/images/functionality/com-1.webp"
                                     alt="" width="163" height="336" class="w-[163px] translate-y-[20%]">
@@ -114,7 +103,7 @@
                                     alt="" width="163" height="336" class="w-[163px] translate-y-[20%]">
                             </div>
                         </FuncBlock>
-                    </transition>
+                    </Transition>
                 </div>
 
             </div>
@@ -173,6 +162,8 @@ useHead({
         lang: 'en',
     },
 })
+
+// const activeComponent = shallowRef()
 
 const clickState = reactive({
     homeicon: true,
