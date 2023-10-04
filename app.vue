@@ -1,12 +1,12 @@
 <template>
   <div>
     <div class="gradient"></div>
-    <div class="home">
       <img class="absolute z-10 right-0 mt-[-20px]" src="./public/assets/images/Sphere-White-Matte.svg" alt="">
-      <NuxtLayout>
-        <NuxtPage />
-      </NuxtLayout>
-    </div>
+      <div class="px-20 py-10">
+        <NuxtLayout>
+          <NuxtPage />
+        </NuxtLayout>
+      </div>
     <img class="absolute z-10 bottom-20" src="./public/assets/images/Pill-Blue-Glossy.svg" alt="">
     <!-- <img class="absolute z-10 bottom-0 flex left-[50%]" src="./public/assets/images/RoundCube-Orange-Glossy.svg" alt=""> -->
     <img class="absolute bottom-0 flex right-0" src="./public/assets/images/SuperToroid-Yellow-Glossy.svg" alt="">
@@ -28,19 +28,6 @@
   position: absolute;
   margin-left: -300px;
   margin-top: -300px;
-}
-
-.home {
-  padding: 30px 170px;
-  border-radius: 24px;
-  border: 2px solid rgba(255, 255, 255, 0.50);
-  background: linear-gradient(107deg, rgba(255, 255, 255, 0.05) 3.44%, rgba(255, 255, 255, 0.02) 64.82%);
-  backdrop-filter: blur(15px);
-  flex-shrink: 0;
-  z-index: 5;
-  position: absolute;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%);
+  z-index: -3 !important;
 }
 </style>
