@@ -1,34 +1,52 @@
 <template>
-    <div class="flex flex-col gap-5 max-w-[650px] w-full">
-        <div class="doctorinfo__headings">
-            <h4 class="text-green font-poppins font-bold text-2xl">“Doctor Farrukh Habib”</h4>
-            <h3 class="text-3xl mt-2 text-dark font-poppins font-bold">Shariah Advisor at Saraf Screening</h3>
+    <section
+        class="container bg-white-100 items-center rounded-[20px] mt-20 p-4 md:py-12 md:px-8 mb-10 flex md:flex-row flex-col gap-12 justify-center">
+        <img :src="doctorinfo.image" class="w-[350px] h-[260px]" alt="">
+        <div class="flex flex-col gap-5 max-w-[650px] w-full">
+            <div class="doctorinfo__headings">
+                <h4 class="text-green font-poppins font-bold text-2xl">{{ doctorinfo.title }}</h4>
+                <h3 class="text-3xl mt-2 text-dark font-poppins font-bold">{{ doctorinfo.short_description }}</h3>
+            </div>
+            <ul class="flex flex-col space-y-3">
+                <li v-for="infochek in doctorinfocheck" :key="infochek"
+                    class="flex font-poppins items-center gap-2 text-dark font-bold text-sm">
+                    <img src="https://sarafscreening.com/svg/icon-checked.svg" alt="">
+                    {{ infochek.title }}
+                </li>
+            </ul>
+            <NuxtLink to="about-doctor" class="flex">
+                <Button variant="outline2" title="Learn more"></Button>
+            </NuxtLink>
         </div>
-        <ul class="flex flex-col space-y-3">
-            <li class="flex font-poppins items-center gap-2 text-dark font-bold text-sm">
-                <img src="https://sarafscreening.com/svg/icon-checked.svg" alt="">
-                Co-Founder of Alif Technologies (Dubai) & Shariah Experts (London), Chairman of the Shariah Governance Board
-                of MRHB Defi
-            </li>
-            <li class="flex font-poppins items-center gap-2 text-dark font-bold text-sm">
-                <img src="https://sarafscreening.com/svg/icon-checked.svg" alt="">
-             Expert in Islamic law & fintech with a strong educational background and vast global experience of more than 9 years
-            </li>
-            <li class="flex font-poppins items-center gap-2 text-dark font-bold text-sm">
-                <img src="https://sarafscreening.com/svg/icon-checked.svg" alt="">
-               Ph.D. Islamic Finance from INCEIF, Malaysia; MSc in banking and finance from Queen Mary, University of London, UK; a bachelor and master in economics from University of Karachi, Pakistan.
-            </li>
-            <li class="flex font-poppins items-center gap-2 text-dark font-bold text-sm">
-                <img src="https://sarafscreening.com/svg/icon-checked.svg" alt="">
-               8-years-course, covering Hadith, Fiqh, Tafseer, and classical Arabic at Jamia Uloom Al-Islamia, Banori Town, Karachi
-            </li>
-        </ul>
-        <div class="flex">
-            <Button variant="outline2" title="Learn more"></Button>
-        </div>
-    </div>
+    </section>
 </template>
 <script setup lang="ts">
+import client from '../api/api';
+
+const props = defineProps<{
+    doctorinfo: Object,
+    doctorinfocheck: Object,
+}>()
+
+
+let doctorinfo = ref({})
+let doctorinfocheck = ref([])
+
+
+
+const getDoctorInfo = async () => {
+    try {
+        const { data } = await client.get(`landing/ReviewerDetail/`)
+        doctorinfo.value = data
+        doctorinfocheck.value = data.items
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+onMounted(() => {
+    getDoctorInfo()
+})
 
 </script>
 <style lang="css" scoped></style>

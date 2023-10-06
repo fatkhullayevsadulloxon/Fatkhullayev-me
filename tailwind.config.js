@@ -17,7 +17,8 @@ export default {
         dark: '#080a15',
         secondary: '#ffffff0f', 
         'white-100': '#f6f7f9',
-        'white-200': '#676a7d'
+        'white-200': '#676a7d',
+        'white-300': '#f0f0f5',
       },
       lineHeight:{
         136: '136%'

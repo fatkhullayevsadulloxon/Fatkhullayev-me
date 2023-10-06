@@ -18,7 +18,7 @@
             </li>
         </ul>
         <div class="flex mt-3">
-            <Button variant="secondary" title="Get acces now"></Button>
+            <Button @click="$emit('openModal')" variant="secondary" title="Get acces now"></Button>
         </div>
     </div>
 </template>

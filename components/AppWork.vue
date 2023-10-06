@@ -14,11 +14,20 @@
             </li>
             <li class="flex items-center ">
                 <i class="icon-phone">
-                    <img src="../public/assets/images/user-icon.png" alt="">
+                    <img width="25" height="25" src="../public/assets/images/user-icon.png" alt="">
                 </i>
                 <div class="ms-5">
                     <p class="text-white m-0 p-0 text-lg font-poppins font-bold">Install the app</p>
                     <small class="font-poppins m-0 p-0 text-white-200">Download the app from App Store or Google play</small>
+                </div>
+            </li>
+            <li class="flex items-center ">
+                <i class="icon-phone">
+                    <img width="25" height="25" src="../public/assets/images/smile-icon.png" alt="">
+                </i>
+                <div class="ms-5">
+                    <p class="text-white m-0 p-0 text-lg font-poppins font-bold">Start discovering</p>
+                    <small class="font-poppins m-0 p-0 text-white-200">Embark on Your Journey to Discover Shariah-Compliant Project Summaries and Invest Wisely</small>
                 </div>
             </li>
         </ul>

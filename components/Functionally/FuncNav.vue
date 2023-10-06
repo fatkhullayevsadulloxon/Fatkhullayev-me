@@ -47,7 +47,7 @@
 </template>
 <script setup lang="ts">
 
-const propss = defineProps < {
+const custompropsfun = defineProps < {
     homeicon: Boolean,
     exploreicon: Boolean,
     watchlisticon: Boolean,
